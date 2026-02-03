@@ -28,6 +28,8 @@
     week = log --after 7.days.ago --author="ToUpdate" --pretty=oneline --abbrev-commit
     whoami = "!echo \"$(git config user.username):$(git config user.name) ($(git config user.email))\""
     fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    pushfwl = push --force-with-lease
+    aib = "!bash ~/scripts/auto-branch.sh"
 [core]
     autocrlf = input
     pager = diff-so-fancy | less --tabs=4 -RFX
